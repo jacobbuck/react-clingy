@@ -1,0 +1,24 @@
+{
+  "name": "react-clingy",
+  "version": "0.0.1",
+  "description": "Position an element relative to another element in React.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jacobbuck/react-clingy.git"
+  },
+  "keywords": ["position", "react"],
+  "author": "Jacob Buck <buck.jacob@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/jacobbuck/react-clingy/issues"
+  },
+  "homepage": "https://github.com/jacobbuck/react-clingy#readme",
+  "peerDependencies": {
+    "clingy": "^0.0.1",
+    "react": "^15.4.1"
+  }
+}
