@@ -17,8 +17,12 @@
     "url": "https://github.com/jacobbuck/react-clingy/issues"
   },
   "homepage": "https://github.com/jacobbuck/react-clingy#readme",
+  "dependencies": {
+    "create-react-class": "^15.5.2",
+    "clingy": "^0.0.7",
+    "prop-types": "^15.5.7"
+  },
   "peerDependencies": {
-    "clingy": "~0.0.1",
     "react": "^15.4.1"
   }
 }

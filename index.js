@@ -1,15 +1,16 @@
 'use strict';
 
 var cling = require('clingy');
-var React = require('react');
+var createReactClass = require('create-react-class');
+var PropTypes = require('prop-types');
 
-var Clingy = React.createClass({
+var Clingy = createReactClass({
 
 	displayName: 'Clingy',
 
 	propTypes: {
-		children: React.PropTypes.node,
-		target: React.PropTypes.instanceOf(Node),
+		children: PropTypes.node,
+		target: PropTypes.instanceOf(Node),
 	},
 
 	componentDidMount: function() {
