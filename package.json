@@ -18,8 +18,8 @@
   },
   "homepage": "https://github.com/jacobbuck/react-clingy#readme",
   "dependencies": {
-    "create-react-class": "^15.5.2",
     "clingy": "^0.0.7",
+    "create-react-class": "^15.5.2",
     "prop-types": "^15.5.7"
   },
   "peerDependencies": {
