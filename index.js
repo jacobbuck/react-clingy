@@ -3,6 +3,7 @@
 var cling = require('clingy');
 var createReactClass = require('create-react-class');
 var PropTypes = require('prop-types');
+var React = require('react');
 
 var Clingy = createReactClass({
 
