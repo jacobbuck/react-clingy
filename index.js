@@ -10,8 +10,8 @@ var Clingy = createReactClass({
   displayName: 'Clingy',
 
   propTypes: {
-    children: PropTypes.node,
-    target: PropTypes.instanceOf(Node),
+    children: PropTypes.node.isRequired,
+    target: PropTypes.instanceOf(Node).isRequired,
   },
 
   componentDidMount: function() {
