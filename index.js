@@ -7,46 +7,46 @@ var React = require('react');
 
 var Clingy = createReactClass({
 
-	displayName: 'Clingy',
+  displayName: 'Clingy',
 
-	propTypes: {
-		children: PropTypes.node,
-		target: PropTypes.instanceOf(Node),
-	},
+  propTypes: {
+    children: PropTypes.node,
+    target: PropTypes.instanceOf(Node),
+  },
 
-	componentDidMount: function() {
-		this.createCling();
-	},
+  componentDidMount: function() {
+    this.createCling();
+  },
 
-	componentDidUpdate: function() {
-		this.destroyCling();
-		this.createCling();
-	},
+  componentDidUpdate: function() {
+    this.destroyCling();
+    this.createCling();
+  },
 
-	componentWillUnmount: function() {
-		this.destroyCling();
-	},
+  componentWillUnmount: function() {
+    this.destroyCling();
+  },
 
-	createCling: function() {
-		this.cling = cling(
-			this.rootRef,
-			this.props.target,
-			this.props
-		);
-	},
+  createCling: function() {
+    this.cling = cling(
+      this.rootRef,
+      this.props.target,
+      this.props
+    );
+  },
 
-	destroyCling: function() {
-		if (this.cling && !this.cling.isDestroyed()) {
-			this.cling.destroy();
-		}
-	},
+  destroyCling: function() {
+    if (this.cling && !this.cling.isDestroyed()) {
+      this.cling.destroy();
+    }
+  },
 
-	render: function() {
-		return React.cloneElement(
-			this.props.children,
-			{ ref: function(ref) { this.rootRef = ref; }.bind(this) }
-		);
-	}
+  render: function() {
+    return React.cloneElement(
+      this.props.children,
+      { ref: function(ref) { this.rootRef = ref; }.bind(this) }
+    );
+  }
 
 });
 
