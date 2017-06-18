@@ -1,6 +1,7 @@
 import cling from 'clingy';
 import PropTypes from 'prop-types';
 import React from 'react';
+import { findDOMNode } from "react-dom";
 
 class Clingy extends React.Component {
   static propTypes = {
@@ -22,11 +23,15 @@ class Clingy extends React.Component {
   }
 
   createCling() {
-    this.cling = cling(
-      this.rootRef,
-      this.props.target,
-      this.props
-    );
+    const node = findDOMNode(this);
+
+    if (node) {
+      this.cling = cling(
+        node,
+        this.props.target,
+        this.props
+      );
+    }
   }
 
   destroyCling() {
@@ -36,10 +41,7 @@ class Clingy extends React.Component {
   }
 
   render() {
-    return React.cloneElement(
-      this.props.children,
-      { ref: function(ref) { this.rootRef = ref; }.bind(this) }
-    );
+    return React.Children.only(this.props.children);
   }
 }
 
