@@ -1,6 +1,6 @@
 {
   "name": "react-clingy",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "description": "Position an element relative to another element in React.",
   "main": "lib/Clingy.js",
   "files": [
@@ -26,7 +26,7 @@
   },
   "homepage": "https://github.com/jacobbuck/react-clingy#readme",
   "dependencies": {
-    "clingy": "^0.0.7",
+    "clingy": "^1.0.0",
     "prop-types": "^15.5.7"
   },
   "peerDependencies": {
