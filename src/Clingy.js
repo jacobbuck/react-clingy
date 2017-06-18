@@ -1,12 +1,12 @@
-import cling from 'clingy';
-import PropTypes from 'prop-types';
-import React from 'react';
+import cling from "clingy";
+import PropTypes from "prop-types";
+import React from "react";
 import { findDOMNode } from "react-dom";
 
 class Clingy extends React.Component {
   static propTypes = {
     children: PropTypes.element.isRequired,
-    target: PropTypes.instanceOf(Node).isRequired,
+    target: PropTypes.instanceOf(Node).isRequired
   };
 
   componentDidMount() {
@@ -26,11 +26,7 @@ class Clingy extends React.Component {
     const node = findDOMNode(this);
 
     if (node) {
-      this.cling = cling(
-        node,
-        this.props.target,
-        this.props
-      );
+      this.cling = cling(node, this.props.target, this.props);
     }
   }
 
