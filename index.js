@@ -1,53 +1,46 @@
-'use strict';
+import cling from 'clingy';
+import PropTypes from 'prop-types';
+import React from 'react';
 
-var cling = require('clingy');
-var createReactClass = require('create-react-class');
-var PropTypes = require('prop-types');
-var React = require('react');
-
-var Clingy = createReactClass({
-
-  displayName: 'Clingy',
-
-  propTypes: {
+class Clingy extends React.Component {
+  static propTypes = {
     children: PropTypes.element.isRequired,
     target: PropTypes.instanceOf(Node).isRequired,
-  },
+  };
 
-  componentDidMount: function() {
+  componentDidMount() {
     this.createCling();
-  },
+  }
 
-  componentDidUpdate: function() {
+  componentDidUpdate() {
     this.destroyCling();
     this.createCling();
-  },
+  }
 
-  componentWillUnmount: function() {
+  componentWillUnmount() {
     this.destroyCling();
-  },
+  }
 
-  createCling: function() {
+  createCling() {
     this.cling = cling(
       this.rootRef,
       this.props.target,
       this.props
     );
-  },
+  }
 
-  destroyCling: function() {
+  destroyCling() {
     if (this.cling && !this.cling.isDestroyed()) {
       this.cling.destroy();
     }
-  },
+  }
 
-  render: function() {
+  render() {
     return React.cloneElement(
       this.props.children,
       { ref: function(ref) { this.rootRef = ref; }.bind(this) }
     );
   }
+}
 
-});
-
-module.exports = Clingy;
+export default Clingy;
