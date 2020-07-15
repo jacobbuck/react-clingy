@@ -1,3 +1,7 @@
+> # :rotating_light: Deprecated
+> 
+> This project is no longer being maintained. I'd recommend using the popular [react-popper](https://github.com/popperjs/react-popper) package instead as it's  mature, better tested, and offers more features.
+
 # react-clingy
 
 Position elements relative to each other in React.
